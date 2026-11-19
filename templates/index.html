@@ -1,1 +1,47 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Getting to know you</title>
+</head>
+<body>
+    <h1>Getting to know you</h1>
+    <form method="POST">
+        <label>what is your name?</label>
+        <input type="text" name="name" required>
+        <label>which country are you from?</label>
+        <input type="text" name="country"required>
+        <label>what is your favorite food?</label>
+        <input type="text" name="food"required>
+        <label>what do you like to do in your free time?</label>
+        <input type="text" name="activity"required>
+        <label>who is your favorite artist?</label>
+        <input type="text" name="artist"required>
+        <label>what is your current favorite song?</label>
+        <input type="text" name="song"required>
+        <label>what is your favorite color?</label>
+        <input type="text" name="color" required>
+        <label>what is your favorite Tv show or movie</label>
+        <input type="text" name="movie"required>
+        <label>what programming language is your favorite?</label>
+        <input type="text" name="language"required>
+        <label>what is your guilty pleasure?</label>
+        <input type="text" name="guilty_pleasure" required>
+        <button type="submit">Submit Answers</button>
+    </form>
+    {% if answers %}
+        <h2>Thank you for answering MR BANDA!</h2>
+
+        <p>Name: {{ answers.name}}</p>
+        <p>country: {{ answers.country}}</p>
+        <p>favorite food: {{ answers.food}}</p>
+        <P>free-time activities: {{ answers.activity}}</P>
+        <p>favorite artist: {{ answers.artist}}</p>
+        <p>favorite song: {{answers.song}}</p>
+        <p>favorite color: {{answers.color}}</p>
+        <p>favorite Tv show or movie: {{answers.movie}}</p>
+        <p>programming language: {{answers.language}}</p>
+        <p>Guilty pleasure: {{answers.guilty_pleasure}}</p>
+    {% endif %}
+</body>
+</html>
 
